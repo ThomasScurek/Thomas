@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            name="CoinList View"
+            icon="icons/sample.gif"
+            category="crypto.platform.view.coinlist"
+            class="crypto.platform.view.coinlist.views.CoinListView"
+            id="crypto.platform.view.coinlist.views.CoinListView">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="crypto.application.perspective">
+         <view
+               ratio="0.5"
+               relative="org.eclipse.ui.editorss"
+               relationship="left"
+               id="crypto.platform.view.coinlist.views.CoinListView">
+         </view>
+      </perspectiveExtension>
+   </extension>
+   <extension
+         point="org.eclipse.help.contexts">
+      <contexts
+            file="contexts.xml">
+      </contexts>
+   </extension>
+
+</plugin>
